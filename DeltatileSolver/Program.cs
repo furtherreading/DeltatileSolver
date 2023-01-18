@@ -115,8 +115,6 @@ namespace SwapSolver
         /// </param>
         static void showSol(Board board, string sol)
         {
-
-
             int move, i;
             move = 0;
 
@@ -150,7 +148,6 @@ namespace SwapSolver
                 board.move(move, true);
                 Console.CursorTop = cursorpos; // reset CLI pos so that we can keep overwriting the board.
                 board.printBoard();
-                //Console.WriteLine(sol.Remove(0, i + 1));
                 System.Threading.Thread.Sleep(1000); //make a move every second
             }
         }
