@@ -138,9 +138,8 @@ namespace SwapSolver
 
         /// <summary>
         /// A Solver that finds a solution with minimal amount of swaps.
-        /// Uses DFS instead of BFS, but is usually significantly faster
-        /// than the normal solver, since this solver reduces the search
-        /// tree more aggresively.
+        /// Uusually significantly faster than the normal solver, since
+        /// this solver reduces the search tree more aggresively.
         /// </summary>
         /// <param name="n"> max amount of swaps to look for.</param>
         /// <returns>Either "no solution" or the solution string.</returns>
@@ -148,7 +147,7 @@ namespace SwapSolver
         {
             //similar to Solve(), see comments there for explanation
 
-            for (int i2 = 0; i2 < n; i2++) // do a DFS search up to the specified amount of swaps
+            for (int i2 = 0; i2 < n; i2++) // start looking for solutions with 0 swaps, then 1 etc.
             {
                 Queue<Board> queue = new Queue<Board>();
                 HashSet<string> history = new HashSet<string>();
