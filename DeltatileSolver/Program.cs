@@ -1,24 +1,10 @@
-﻿using System.Text;
+﻿using DeltatileSolver;
+using System.Text;
 
 namespace SwapSolver
 {
 
-    /*
-     * @ = Player Avatar
-     * # = Unpassable Empty Space
-     * $ = Unpassable Wall
-     * nswe = winds, blowing north/south/west/east
-     * ( = closed gate
-     * ) = opened gate
-     * b = breakable ice
-     * B = breakable ice that has been stepped on
-     * i = slidy ice
-     * 1-9 : gate counter, opens gate for 1-9 moves
-     * l = lava
-     * f = finish
-     * W = Water
-     * 
-     */
+    
     /// <summary>
     /// Main Class. Sets up a board and runs a solver on it.
     /// </summary>
@@ -29,11 +15,7 @@ namespace SwapSolver
             Console.WriteLine("Solving Board...");
 
             // Parse level, setup solver
-            string level =
-
-                                "#########," +
-                                "#@ $   fw," +
-                                "#########";
+            String level = Levels.levels[0];
 
             Board myBoard = new Board(level.Split(','));
             Solver mySolver = new Solver(new Board(myBoard));

@@ -64,7 +64,9 @@ namespace SwapSolver
                             {
                                 Console.WriteLine("Size of hashset: " + history.Count());
                                 Console.WriteLine("Legal Moves tried: " + counter);
-                                Console.WriteLine("Length: " + currBoard2.getMoves().Length);
+                                //count swaps as one move
+                                int length = Regex.Replace(currBoard2.getMoves(), @"[\d(]", string.Empty).Count();
+                                Console.WriteLine("Length: " + length);
                                 return currBoard2.getMoves();
                             }
                             else
@@ -192,7 +194,8 @@ namespace SwapSolver
                                 {
                                     Console.WriteLine("Size of hashset: " + history.Count());
                                     Console.WriteLine("Legal Moves tried: " + counter);
-                                    Console.WriteLine("Length: " + currBoard2.getMoves().Length);
+                                    int length = Regex.Replace(currBoard2.getMoves(), @"[\d(]", string.Empty).Count();
+                                    Console.WriteLine("Length: " + length);
                                     return currBoard2.getMoves();
                                 }
                                 else
